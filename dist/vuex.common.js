@@ -1,6 +1,6 @@
 /*!
  * vuex v3.6.2
- * (c) 2021 Evan You
+ * (c) 2023 Evan You
  * @license MIT
  */
 'use strict';
@@ -1242,3 +1242,4 @@ var index_cjs = {
 };
 
 module.exports = index_cjs;
+//# sourceMappingURL=vuex.common.js.map

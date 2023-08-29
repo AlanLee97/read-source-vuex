@@ -11,15 +11,16 @@ const banner = `/*!
  * @license MIT
  */`
 
-export function createEntries(configs) {
+export function createEntries (configs) {
   return configs.map((c) => createEntry(c))
 }
 
-function createEntry(config) {
+function createEntry (config) {
   const c = {
     input: config.input,
     plugins: [],
     output: {
+      sourcemap: true,
       banner,
       file: config.file,
       format: config.format

@@ -1,6 +1,6 @@
 /*!
  * vuex v3.6.2
- * (c) 2021 Evan You
+ * (c) 2023 Evan You
  * @license MIT
  */
 (function (global, factory) {
@@ -1248,3 +1248,4 @@
   return index_cjs;
 
 })));
+//# sourceMappingURL=vuex.js.map
