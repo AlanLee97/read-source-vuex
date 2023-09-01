@@ -22,5 +22,8 @@ export const mutations = {
       text,
       done
     })
+  },
+  changeText (state, val) {
+    state.hello = val
   }
 }

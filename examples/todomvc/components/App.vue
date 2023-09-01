@@ -45,6 +45,7 @@
         Clear completed
       </button>
     </footer>
+    <h2 style="position: fixed; left: 0; top: 0; z-index: 999; background-color: #fff;" @click="changeText">{{ $store.state.hello }}</h2>
   </section>
 </template>
 
@@ -91,6 +92,9 @@ export default {
         this.$store.dispatch('addTodo', text)
       }
       e.target.value = ''
+    },
+    changeText () {
+      this.$store.commit('changeText', Math.random())
     }
   },
   filters: {
