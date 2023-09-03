@@ -25,6 +25,7 @@ export class Store {
       strict = false
     } = options
 
+    // 做一些初始化
     // store internal state
     this._committing = false
     this._actions = Object.create(null)
@@ -39,6 +40,8 @@ export class Store {
 
     // bind commit and dispatch to self
     const store = this
+
+    // 包装一下dispatch, commit方法
     const { dispatch, commit } = this
     this.dispatch = function boundDispatch (type, payload) {
       return dispatch.call(store, type, payload)
@@ -57,6 +60,7 @@ export class Store {
     // and collects all module getters inside this._wrappedGetters
     installModule(this, state, [], this._modules.root)
 
+    // 核心逻辑 实现state的响应式
     // initialize the store vm, which is responsible for the reactivity
     // (also registers _wrappedGetters as computed properties)
     resetStoreVM(this, state)
@@ -303,6 +307,7 @@ function resetStoreVM (store, state, hot) {
   // some funky global mixins
   const silent = Vue.config.silent
   Vue.config.silent = true
+  // 核心逻辑，new了一个Vue，只提供了data和computed，将state作为data，以实现state的响应式
   store._vm = new Vue({
     data: {
       $$state: state

@@ -11,7 +11,7 @@ debugger
 export default new Vuex.Store({
   state: {
     // todos: JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '[]'),
-    hello: '123456'
+    hello: 'AlanLee'
   },
   actions,
   mutations,

@@ -6,23 +6,23 @@ if (navigator.userAgent.indexOf('PhantomJS') > -1) {
 }
 
 export const mutations = {
-  addTodo (state, todo) {
-    state.todos.push(todo)
-  },
+  // addTodo (state, todo) {
+  //   state.todos.push(todo)
+  // },
 
-  removeTodo (state, todo) {
-    state.todos.splice(state.todos.indexOf(todo), 1)
-  },
+  // removeTodo (state, todo) {
+  //   state.todos.splice(state.todos.indexOf(todo), 1)
+  // },
 
-  editTodo (state, { todo, text = todo.text, done = todo.done }) {
-    const index = state.todos.indexOf(todo)
+  // editTodo (state, { todo, text = todo.text, done = todo.done }) {
+  //   const index = state.todos.indexOf(todo)
 
-    state.todos.splice(index, 1, {
-      ...todo,
-      text,
-      done
-    })
-  },
+  //   state.todos.splice(index, 1, {
+  //     ...todo,
+  //     text,
+  //     done
+  //   })
+  // },
   changeText (state, val) {
     state.hello = val
   }

@@ -4,6 +4,7 @@ export default function (Vue) {
   if (version >= 2) {
     Vue.mixin({ beforeCreate: vuexInit })
   } else {
+    // 兼容vue1的老代码，不是我们分析的重点，忽略代码
     // override init and inject vuex init procedure
     // for 1.x backwards compatibility.
     const _init = Vue.prototype._init
